@@ -13,28 +13,30 @@ public class exo1 {
     int a= d.Lance_de();
 	System.out.println(a);
 	
-	
+	System.out.println("-------------------------------------------------");
   //Lancer le de n fois
 	 System.out.println("lance le de n fois");
-	    System.out.println("Entrer le nombre de lancé : ");
+	    System.out.println("Entrer le nombre de lancÃ© : ");
 	    int n = sc.nextInt();
     d.Lance_de_n_fois(n);
 
     
    
-     
+     System.out.println("-------------------------------------------------");
     //le nombre d'appartition de la face 6
     System.out.println("le nombre d'appartition de la face 6");
-    System.out.println("Entrer le nombre de lancé : ");
+    System.out.println("Entrer le nombre de lancÃ© : ");
     int e = sc.nextInt();
     d.Nb_appartition(e);
-
+ 
+     System.out.println("-------------------------------------------------");
     //le nombre de lancer avant d'obtenir le nombre 6
    d.Nb_lancer();
-    
    
-   //tirage d'une pièce de monnaie   
-    System.out.println("Entrer le nombre de lancé:");
+    System.out.println("-------------------------------------------------"); 
+   
+   //tirage d'une piÃ¨ce de monnaie   
+    System.out.println("Entrer le nombre de lancÃ©:");
     int b=sc.nextInt();
     d.jet(b);
 	}
@@ -91,11 +93,11 @@ public void Nb_lancer()
 }
 
 
-//tirage d'une pièce de monnaie
+//tirage d'une piÃ¨ce de monnaie
 
 public void jet(int n)
 {
-	System.out.println("tirage d'une pièce de monnaie:");	
+	System.out.println("tirage d'une piÃ¨ce de monnaie:");	
 	
 	for(int i=0;i<n;i++)
     {
