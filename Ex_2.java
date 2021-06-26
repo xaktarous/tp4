@@ -39,20 +39,22 @@ public class Ex_2 {
 		 
         
        if(e.verifier_matrice(t,m)) {
-    	   System.out.print("la matrice est stochastique");
+    	   System.out.println("la matrice est stochastique");
+    	   System.out.println("-------------------------------------------------");
     	   t=e.matrice_pow(t, m);
+    	   for (int i = 0; i <m; i++) {
+     	      for (int j = 0; j < m; j++) {
+     	        System.out.print(t[i][j] +"\t" +"|");
+     	      }
+     	      System.out.println();
+     	    }
        }else {
-    	   System.out.print("la matrice n'est pas stochastique");
+    	   System.out.println("la matrice n'est pas stochastique");
        }
        
        System.out.println("-------------------------------------------------");
        
-       for (int i = 0; i <m; i++) {
-    	      for (int j = 0; j < m; j++) {
-    	        System.out.print(t[i][j] + "\t"  +"|");
-    	      }
-    	      System.out.println();
-    	    }
+     
        
    
          sc.close();
@@ -71,13 +73,15 @@ public class Ex_2 {
 	
 	public boolean verifier_matrice(double [][]a,int n) {
 		double tab[]=new double[n];
+		boolean l=false;
 		for(int i=0;i<n;i++) {
 			for(int j=0;j<n;j++) {
 		        tab[j]=a[i][j];
 			}
-			verifier_vecteur(tab,n);
+			l=verifier_vecteur(tab,n);
+			if(l==false)return l;
 		}
-		return true;
+		return l;
 	}
 	
 	public  double [][] matrice_pow(double [][]a,int n) {
